@@ -1,0 +1,54 @@
+{
+    "name": "pixcafe/starter",
+    "description": "This starter package will initiate a backend template with laravel permission, authentication system as well as new auth pages design.",
+    "keywords": [
+        "pixcafe",
+        "starter"
+    ],
+    "homepage": "https://github.com/pixcafe/starter",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shadhin Ahmed",
+            "email": "shadhinplanet@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pixcafe\\Starter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pixcafe\\Starter\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pixcafe\\Starter\\StarterServiceProvider"
+            ],
+            "aliases": {
+                "Starter": "Pixcafe\\Starter\\StarterFacade"
+            }
+        }
+    }
+}
