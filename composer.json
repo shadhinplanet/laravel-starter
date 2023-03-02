@@ -7,6 +7,7 @@
     ],
     "homepage": "https://github.com/shadhinplanet/laravel-starter",
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -23,9 +24,6 @@
     "require-dev": {
         "orchestra/testbench": "^6.0",
         "phpunit/phpunit": "^9.0"
-    },
-    "conflict": {
-        "laravel/framework": "<9.37.0"
     },
     "autoload": {
         "psr-4": {
