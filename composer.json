@@ -6,6 +6,7 @@
         "starter"
     ],
     "homepage": "https://github.com/shadhinplanet/laravel-starter",
+    "minimum-stability": "stable",
     "license": "MIT",
     "type": "library",
     "authors": [
