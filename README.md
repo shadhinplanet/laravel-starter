@@ -3,7 +3,6 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/pixcafe/starter.svg?style=flat-square)](https://packagist.org/packages/pixcafe/starter)
 [![Total Downloads](https://img.shields.io/packagist/dt/pixcafe/starter.svg?style=flat-square)](https://packagist.org/packages/pixcafe/starter)
 
-
 The "Starter" package will help you get start with your new Laravel project with a awesome backend template. Also, the authentication, roles and user management will be installed.
 
 ## Installation
@@ -19,7 +18,9 @@ composer require pixcafe/starter
 ```php
 php artsian vendor:publish --tag=pixcafe-starter --force
 ```
+
 *Note: It will effect your web.php (route), so make sure you take backup of your existing web.php file.*
+
 ### Changelog
 
 Please see [Changelog](CHANGELOG.md) for more information what has changed recently.
@@ -34,8 +35,8 @@ If you discover any security related issues, please email shadhinplanet@gmail.co
 
 ## Credits
 
--   [Shadhin Ahmed](https://github.com/pixcafe)
--   Pixcafe Team
+- [Shadhin Ahmed](https://github.com/pixcafe)
+- Pixcafe Team
 
 ## License
 
