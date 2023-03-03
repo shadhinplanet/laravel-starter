@@ -19,7 +19,7 @@ composer require pixcafe/starter
 php artisan vendor:publish --tag=pixcafe-starter --force
 ```
 
-*Note: It will effect your web.php (route), so make sure you take backup of your existing web.php file.*
+*Note: It will affect your web.php (route), so make sure you take backup of your existing web.php file.*
 
 ### Changelog
 
