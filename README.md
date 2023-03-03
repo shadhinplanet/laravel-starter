@@ -19,7 +19,7 @@ composer require pixcafe/starter
 ```php
 php artsian vendor:publish --tag=pixcafe-starter --force
 ```
-#####Note: It will effect your web.php (route), so make sure you take backup of your existing web.php file.
+*Note: It will effect your web.php (route), so make sure you take backup of your existing web.php file.*
 ### Changelog
 
 Please see [Changelog](CHANGELOG.md) for more information what has changed recently.
