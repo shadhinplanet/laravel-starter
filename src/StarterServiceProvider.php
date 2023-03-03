@@ -3,7 +3,6 @@
 namespace Pixcafe\Starter;
 
 
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
 class StarterServiceProvider extends ServiceProvider
@@ -13,13 +12,14 @@ class StarterServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
         /*
          * Optional methods to load your package assets
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'starter');
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'starter');
+        // $this->loadViewsFrom(__DIR__ . '/resources/views', 'starter');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        // $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
 
         if ($this->app->runningInConsole()) {
             // Config
@@ -56,11 +56,28 @@ class StarterServiceProvider extends ServiceProvider
                 __DIR__ . '/Helper' => app_path('Helper/'),
             ], 'pixcafe-starter');
 
-            
-            // Registering package commands.
-            // $this->commands([]);
+
+            // "Dashboard" Route...
+            $this->replaceInFile('/home', '/dashboard', resource_path('views/welcome.blade.php'));
+            $this->replaceInFile('Home', 'Dashboard', resource_path('views/welcome.blade.php'));
+            $this->replaceInFile('/home', '/dashboard', app_path('Providers/RouteServiceProvider.php'));
         }
     }
+
+
+    /**
+     * Replace a given string within a given file.
+     *
+     * @param  string  $search
+     * @param  string  $replace
+     * @param  string  $path
+     * @return void
+     */
+    protected function replaceInFile($search, $replace, $path)
+    {
+        file_put_contents($path, str_replace($search, $replace, file_get_contents($path)));
+    }
+
 
     /**
      * Register the application services.
@@ -76,5 +93,15 @@ class StarterServiceProvider extends ServiceProvider
         $this->app->singleton('starter', function () {
             return new Starter;
         });
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [Console\InstallPack::class];
     }
 }
