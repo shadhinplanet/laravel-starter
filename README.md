@@ -1,10 +1,10 @@
-# Very short description of the package
+# Laravel Dashboard Starter Pack
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/pixcafe/starter.svg?style=flat-square)](https://packagist.org/packages/pixcafe/starter)
 [![Total Downloads](https://img.shields.io/packagist/dt/pixcafe/starter.svg?style=flat-square)](https://packagist.org/packages/pixcafe/starter)
-![GitHub Actions](https://github.com/pixcafe/starter/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+
+The "Starter" package will help you get start with your new Laravel project with a awesome backend template. Also, the authentication, roles and user management will be installed.
 
 ## Installation
 
@@ -17,22 +17,16 @@ composer require pixcafe/starter
 ## Usage
 
 ```php
-// Usage description here
+php artsian vendor:publish --tag=pixcafe-starter --force
 ```
-
-### Testing
-
-```bash
-composer test
-```
-
+#####Note: It will effect your web.php (route), so make sure you take backup of your existing web.php file.
 ### Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Please see [Changelog](CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [Contributing](CONTRIBUTING.md) for details.
 
 ### Security
 
@@ -41,12 +35,12 @@ If you discover any security related issues, please email shadhinplanet@gmail.co
 ## Credits
 
 -   [Shadhin Ahmed](https://github.com/pixcafe)
--   [All Contributors](../../contributors)
+-   Pixcafe Team
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-## Laravel Package Boilerplate
+## Thank you
 
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
+Feel free to let us know whwat we should implement more!
