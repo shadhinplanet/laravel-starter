@@ -1,6 +1,6 @@
 {
     "name": "pixcafe/starter",
-    "description": "This starter package will initiate a backend template with laravel permission, authentication system as well as new auth pages design.",
+    "description": "The \"Starter\" package will help you get start with your new Laravel project with a awesome backend template. Also, the authentication, roles and user management will be installed.",
     "keywords": [
         "pixcafe",
         "starter"
