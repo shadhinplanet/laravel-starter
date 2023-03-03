@@ -16,7 +16,7 @@ composer require pixcafe/starter
 ## Usage
 
 ```php
-php artsian vendor:publish --tag=pixcafe-starter --force
+php artisan vendor:publish --tag=pixcafe-starter --force
 ```
 
 *Note: It will effect your web.php (route), so make sure you take backup of your existing web.php file.*
